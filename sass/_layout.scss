@@ -56,5 +56,9 @@
 
 .user-reviews {
     flex: 1; // ocupy remaining space; (flex-grow)
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
