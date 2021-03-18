@@ -16,6 +16,12 @@
     align-items: center; //center elements along the CROSS AXIS / VERTICAL
     justify-content: center; //center elements along the MAIN AXIS / HORIZONTAL
 
+    @media only screen and (max-width: $bp-smallest) {
+        order: 1; //default order value is 0 so if we change to 1 this search bar will be last 
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+     }
+
     &__input {
         font-family: inherit;
         font-size: inherit;
@@ -211,6 +217,13 @@
         margin-right: .8rem;
         fill: currentColor; //currentColor = color of this element or the parent element
         //fill: var(--color-grey-light-1); //fill - changes the color of SVG icons
+
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+            margin-bottom: .7rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 }
 ///////////////////////////////////
@@ -255,6 +268,11 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+          font-size: 1.8rem;
+          padding: 1.25rem 2rem;
+        }
     }
 
     &__stars {
@@ -290,17 +308,29 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 0 1.5rem;
+        }
     }
 
     &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
         margin-bottom: -3px;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+        }
     }
 
     &__rating-count {
         font-size: .8rem;
         text-transform: uppercase;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
+        }
     }
 }
 
